@@ -1,0 +1,347 @@
+body{
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    
+    font-size:  100%;
+    display: flex;
+    background: #0B3954;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  
+    gap: 1%;
+  
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 2%;
+    padding: 0;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    overflow: hidden;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+  
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #087E8B;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #087E8B;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: #0B3954;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #logo {
+    width: 8%;
+    height: 8%;
+    margin-left: 3%;
+  }
+  
+  .navbar img {
+    width: 2%;
+    height: 2%;
+  }
+  
+  #footerContainer {
+  display: flex;
+  flex-grow: 1;
+  font-size: 100%;
+  }
+  
+  #firstPart {
+    display: flex;
+    gap: 8rem;
+  
+    flex-direction: row;
+    background: #0B3954;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+    padding: 1.5rem 0;
+  
+    color: #F9A3A3;
+  
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 30%; 
+    top: 86%;
+  
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  #secondPart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #0B3954;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  
+    gap: 7%;
+    
+    padding-bottom: 1.5rem;
+    padding-top: 0;
+  
+    color: #F9A3A3;
+  
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 71%;
+    top: 86%;
+  
+   
+    justify-content: center;
+    
+  }
+  
+  .email{
+    font-size: 80%;
+  }
+  
+  /* Responsive du Header et Footer */
+  @media (max-width: 1530px){
+  
+    #firstPart {
+        flex-shrink: 2;
+        font-size: 50%;
+    }
+  
+    #secondPart {
+        flex-shrink: 2;
+        font-size: 50%;
+        gap: 0;
+    }
+  }
+  @media (max-width: 1705px){
+  
+    .navbar {
+        font-size: 50%;
+        gap: 0%;
+  
+    }
+  
+    .navbar a{
+        font-size: 50%;
+    }
+  
+    .dropdown-content a{
+        font-size: 50%;
+    }
+  
+  
+    .navbar img {
+        width: 1%;
+        height: 1%;
+    }
+    
+  
+  }
+  
+  @media (max-width: 1080px){
+  
+  footer {
+    font-size: 50%;
+  }
+  
+  #firstPart {
+    gap: 0;
+  }
+  
+  }
+  
+  
+  @media (max-width: 747px){
+    #secondPart{
+        font-size: 25%;
+    }
+  
+    .navbar{
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+  
+  }
+  
+  /* End header/Footer */
+
+#container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Description{
+    background: #FFFFFF;
+    margin-bottom: 10%;
+    flex-basis: 30%;
+    border: 5px solid #C81D25;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 40% 40%;
+}
+
+#Titre{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #087E8B;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Texte1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #FFFFFF;
+    color: #0B4262;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Actualite{
+    background: #FFFFFF;
+    flex-basis: 30%;
+    height: 100%;
+    width: 100%;
+    border: 5px solid #C81D25;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+}
+
+.Texte2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #FFFFFF;
+    color: #0B4262;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Texte2 a{
+    color: #BE3858;
+    text-decoration: none;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button button {
+    background-color: #087E8B;
+    color: white;
+    margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.images img {
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 1fr;
+    padding-bottom: 30%;
+    position: center;
+    width: 55%;
+    height: auto;
+}
