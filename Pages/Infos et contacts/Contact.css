@@ -325,6 +325,11 @@
   }
 }
 
+.reset {
+    -webkit-animation: none;
+            animation: none;
+    transition: none;
+  }
 
   .shake-horizontal {
     -webkit-animation: shake-horizontal 0.8s both;
@@ -434,7 +439,7 @@
 
   }
 
-  .default {
+  #default {
     background: rgb(185, 185, 185);
     border-radius: 18px;
     border: none;
@@ -468,5 +473,31 @@
   align-items: center;
   justify-content: center;
   gap: 5%;
+}
+
+.fruit {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.fruit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styles pour le fruit doré */
+.fruit-golden {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.fruit-golden-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
