@@ -316,8 +316,10 @@ hr{
 
 #upArrowButton{
   position: fixed;
-  size: 300%;
+  height: 200%;
+  width: 200%;
   padding: 14px 16px;
+  margin-bottom: 95%;
   font-family: inherit;
   margin: 0;
   cursor: pointer;
@@ -325,5 +327,7 @@ hr{
 }
 
 i{
-  size: 300%;
+  height: 200%;
+  width: 200%;
+  color: #0B3954;
 }
