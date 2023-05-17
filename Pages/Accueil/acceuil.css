@@ -345,3 +345,15 @@ body{
     width: 55%;
     height: auto;
 }
+
+.images img:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  padding-top: 10%;
+  padding-left: 20%;
+  padding-right: 1fr;
+  padding-bottom: 30%;
+  position: center;
+  width: 55%;
+  height: auto;
+}
