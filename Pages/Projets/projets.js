@@ -1,5 +1,6 @@
 
 function upArrow() {
+    console.log("upArrow");
     window.scrollTo(0, 0);
 }
 
