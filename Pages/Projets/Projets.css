@@ -316,18 +316,19 @@ hr{
 
 #upArrowButton{
   position: fixed;
-  height: 200%;
-  width: 200%;
+  height: 100%;
+  width: 100%;
   padding: 14px 16px;
-  margin-bottom: 95%;
+  background-color: inherit;
+  margin-left: 10%;
+  padding-left: 180%;
+  padding-top: 10%;
   font-family: inherit;
-  margin: 0;
   cursor: pointer;
   z-index: 1;
 }
 
 i{
-  height: 200%;
-  width: 200%;
   color: #0B3954;
+  font-size: 300%;
 }
