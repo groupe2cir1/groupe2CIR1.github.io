@@ -1,3 +1,10 @@
+:root {
+  --couleur-originale: rgb(185, 185, 185); /* Couleur d'origine du bouton */
+  --couleur-rouge-pastel: #a02b3e; /* Couleur rouge pastel */
+  --couleur-texte-originale: #0B4262; /* Couleur d'origine du texte */
+  --couleur-texte-blanc: #FFF; /* Couleur blanche du texte */
+}
+
 /* Navbar container */
 .navbar {
     
@@ -255,6 +262,102 @@
 
   }
 
+
+/**
+ * ----------------------------------------
+ * animation shake-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+}
+
+.reset {
+    -webkit-animation: none;
+            animation: none;
+    transition: none;
+  }
+
+  .shake-horizontal {
+    -webkit-animation: shake-horizontal 0.8s both;
+            animation: shake-horizontal 0.8s both, transitionCouleur 1s;
+    border-radius: 18px;
+    border: none;
+    font-weight: 600;
+  
+  }
+
+  
+  /* Définition de la transition de couleur */
+  @keyframes transitionCouleur {
+    0% {
+      background-color: var(--couleur-originale);
+      color: var(--couleur-texte-originale);
+    }
+    50% {
+      background-color: var(--couleur-rouge-pastel);
+      color: var(--couleur-texte-blanc);
+    }
+    100% {
+      background-color: var(--couleur-originale);
+      color: var(--couleur-texte-originale);
+    }
+  }
+  
+
   .image {
     width: 50%;
     height: 50%;
@@ -289,7 +392,6 @@
     justify-content: center;
 
     height: 100%;
-    margin-bottom: 1%;
 
   }
 
@@ -333,17 +435,69 @@
 
     width: 30%;
     height: 100%;
+    margin-top: 2%;
+
   }
 
   #default {
-    background: #0B4262;
+    background: rgb(185, 185, 185);
     border-radius: 18px;
     border: none;
-    color: white;
+    color: #0B4262;
+    font-weight: 600;
    
   }
  
   .envoyer {
     align-self: flex-end;
-    margin-right: 35%;
   }
+
+.visible {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 100%;
+  display: block;
+  color: rgb(161, 33, 33);
+}
+.errorText{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 80%;
+  display: none;
+  color: rgb(161, 33, 33);
+}
+
+.subdiv{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.fruit {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.fruit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styles pour le fruit doré */
+.fruit-golden {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.fruit-golden-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
