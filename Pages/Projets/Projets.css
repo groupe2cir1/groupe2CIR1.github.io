@@ -314,12 +314,16 @@ hr{
   margin-bottom: 40%;
 }
 
-i{
-  color: #0B4262;
-  font-size: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
-  position: absolute;
+#upArrowButton{
+  position: fixed;
+  size: 300%;
+  padding: 14px 16px;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
 }
 
-
+i{
+  size: 300%;
+}
