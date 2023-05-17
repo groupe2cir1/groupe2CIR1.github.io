@@ -3,6 +3,7 @@
  <head>
     <meta charset="utf-8">
     <link href="Projets.css" rel="stylesheet"> 
+    <script src="projets.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -70,7 +71,7 @@
 <hr>
 <div class="container">
     <div class="subContainer">
-        <img class="img" src="../../cahier des charges/DocsImgs/empreinte.png">
+        <img id="CASTEL" class="img" src="../../cahier des charges/DocsImgs/empreinte.png" onclick="changeImage(id)">
     
         <div class="texte">
             <p>CASTEL : accompagnement dans la transformation digitale<br>
@@ -88,7 +89,7 @@
 
 <div class="container">
     <div class="subContainer">
-        <img class="img" src="../../cahier des charges/DocsImgs/sousmarin.png">
+        <img id="VISEMAR" class="img" src="../../cahier des charges/DocsImgs/sousmarin.png" onclick="changeImage(id)">
     
     <div class="texte">
         <p>VISEMAR  : amélioration des performances des drones autonomes sous-marins par vision<br>
@@ -101,7 +102,7 @@
 <hr>
 <div class="container">
     <div class="subContainer">
-        <img class="img" src="../../cahier des charges/DocsImgs/iceberg.png">
+        <img id="SEAS" class="img" src="../../cahier des charges/DocsImgs/iceberg.png" onclick="changeImage(id)">
         
     <div class="texte">
         <p>SEAS : Système d'Étude Autonome et de Surveillance de la faune patrimoniale en milieu protégé<br>
@@ -116,7 +117,7 @@
 <hr>
 <div class="container" id="end">
     <div class="subContainer">
-        <img class="img" src="../../cahier des charges/DocsImgs/architecutre.png">
+        <img id="HPEC" class="img" src="../../cahier des charges/DocsImgs/architecutre.png" onclick="changeImage(id)">
 
         <div class="texte">
             <p>HPeC : architectures électroniques reconfigurables dynamiquement (2019)<br>
@@ -128,8 +129,8 @@
     </div>    
 <hr>
 </div>
-<div  id="upArrowButton" onclick="window.scrollTo(0, 0);">
-    <i class="fa-solid fa-circle-arrow-up"></i>
+<div  id="upArrowButton">
+    <i class="fa-solid fa-circle-arrow-up" onclick="window.scrollTo(0, 0);"></i>
 </div>
 
 
