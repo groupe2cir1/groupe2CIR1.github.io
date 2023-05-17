@@ -58,12 +58,12 @@ function canSend(){
 }
 
 function createFallingFruits() {
-    const fruitTypes = ['apple', 'banana', 'orange', 'cherry', 'fraise']; // Types de fruits disponibles
-    const numFruits = 600; // Nombre de fruits à créer
+    const fruitTypes = ['apple', 'banana', 'orange', 'cherry', 'fraise', 'watermelon', 'poire']; // Types de fruits disponibles
+    const numFruits = 1500; // Nombre de fruits à créer
 
     // Créer l'élément du fruit doré
     const goldenFruit = document.createElement('img');
-    goldenFruit.src = 'fruits/goldenfruit.jpg';
+    goldenFruit.src = 'fruits/goldenfruit.png';
     goldenFruit.alt = 'Fruit doré';
     goldenFruit.classList.add('fruit-golden');
     document.body.appendChild(goldenFruit);
@@ -83,7 +83,7 @@ function createFallingFruits() {
 
         // Créer l'élément du fruit
         const fruit = document.createElement('img');
-        fruit.src = `fruits/${randomFruitType}.jpg`;
+        fruit.src = `fruits/${randomFruitType}.png`;
         fruit.alt = randomFruitType;
         fruit.classList.add('fruit');
         document.body.appendChild(fruit);
