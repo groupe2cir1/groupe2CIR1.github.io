@@ -329,3 +329,26 @@ body{
     grid-template-columns:15% 80% 5%;
     grid-template-rows: 1fr;
 }
+
+#filterField {
+  text-align: center;
+  margin-top: 2%;
+}
+
+#filterContainer {
+  padding: 2px;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 20px;
+  border: 5px solid #a7a7a7;
+  display: inline-block;
+}
+
+.filterButton {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  background-color:white;
+  border-radius: 10px;
+  color: #0B4262;
+  text-align: center;
+}
