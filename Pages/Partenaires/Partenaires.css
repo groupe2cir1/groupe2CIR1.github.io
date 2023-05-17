@@ -243,14 +243,14 @@ body{
   flex-basis: 40%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 80%; 
+    grid-template-rows: 20% 80%;
 }
 
 #inat {
   flex-basis: 40%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 80%; 
+  grid-template-rows: 20% 80%;
 }
 
 .titre {
