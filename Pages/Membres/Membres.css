@@ -212,15 +212,17 @@ body {
     background: url('../../icons/Ayoub.png') center center no-repeat;
     background-size: 300px;
 }
+
+/*
 #card0:hover {
     background: url('../../icons/Ayoub.png') center center no-repeat;
     background-size: 600px;
 }
+*/
 
 /* Test grattage */
 
 .container {
-  border: 3px solid yellow;
   position: relative;
   width: 300px;
   height: 300px;
