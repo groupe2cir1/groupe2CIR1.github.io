@@ -202,20 +202,48 @@ body {
     position: relative;
   }
   
-  .border:hover {
+.border:hover {
       border: 1px solid white;
   }
 .center{
     text-align: center;
 }
-.card0 {
+#card0 {
     background: url('../../icons/Ayoub.png') center center no-repeat;
     background-size: 300px;
 }
-.card0:hover {
+#card0:hover {
     background: url('../../icons/Ayoub.png') center center no-repeat;
     background-size: 600px;
 }
+
+/* Test grattage */
+
+.container {
+  border: 3px solid yellow;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  -o-user-select: none;
+  user-select: none;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+}
+
+.form {
+  padding: 20px;
+}
+
+
+/* fin test grattage */
+
 .card h2 {
     font-family: Arial, sans-serif;
     color: white;
