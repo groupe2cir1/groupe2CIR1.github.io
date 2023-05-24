@@ -66,14 +66,44 @@ function buttonFilter(){
                 element.classList.remove("toggled");
             }
         });
-        setTimeout(function(){document.getElementById("filter3").className = "filterButton";}, 100);
+        document.getElementById("input").value = "";
+        setTimeout(function(){document.getElementById("filter3").className = "filterButton";}, 400);
     });
 
+}
+
+
+function filter(){
+    let elem = document.getElementById("input");
+    elem.addEventListener("input", function (){
+        let text = elem.value;
+
+        let firstText = document.getElementsByClassName("text")[0];
+        let secondText = document.getElementsByClassName("text")[1];
+        let thirdText = document.getElementsByClassName("text")[2];
+        let fourthText = document.getElementsByClassName("text")[3];
+        let fifthText = document.getElementsByClassName("text")[4];
+
+        console.log(document.getElementsByClassName("text")[0].innerText);
+
+        Array.from(document.getElementsByClassName("text")).forEach(element => {
+            if(element.innerHTML.includes(text)){
+                console.log("ok");
+                element.parentElement.style.display = "block";
+                element.parentElement.style.order = "-1";
+            }
+            else{
+                element.parentElement.style.display = "none";
+                element.parentElement.style.order = "0";
+            }
+        });
+    });
 }
 
 
 function main(){
     toggleButton();
     buttonFilter();
+    filter();
 }
 main();

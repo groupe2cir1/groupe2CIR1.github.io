@@ -3,6 +3,10 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+.highlight {
+    color: #0B3954;
+}
+
 /* Navbar start */
 .navbar {
     
