@@ -97,71 +97,6 @@
   height: 2%;
 }
 
-#footerContainer {
-display: flex;
-flex-grow: 1;
-font-size: 100%;
-}
-
-#firstPart {
-  display: flex;
-  gap: 8rem;
-
-  flex-direction: row;
-  background: #0B3954;
-  
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-  
-  padding: 1.5rem 0;
-
-  color: #F9A3A3;
-
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 30%; 
-  top: 86%;
-
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-#secondPart{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background: #0B3954;
-  
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-
-  gap: 7%;
-  
-  padding-bottom: 1.5rem;
-  padding-top: 0;
-
-  color: #F9A3A3;
-
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 71%;
-  top: 86%;
-
- 
-  justify-content: center;
-  
-}
-
 .email{
   font-size: 80%;
 }
@@ -175,20 +110,6 @@ font-size: 100%;
   }
   
 
-/* Responsive du Header et Footer */
-@media (max-width: 1530px){
-
-  #firstPart {
-      flex-shrink: 2;
-      font-size: 50%;
-  }
-
-  #secondPart {
-      flex-shrink: 2;
-      font-size: 50%;
-      gap: 0;
-  }
-}
 @media (max-width: 1705px){
 
   .navbar {
@@ -211,45 +132,70 @@ font-size: 100%;
       height: 1%;
   }
   
-
-}
-
-@media (max-width: 1757px){
-
-footer {
-  font-size: 50%;
-}
-
 #firstPart {
-  gap: 0;
-}
+  display: flex;
+    flex-direction: row;
+  gap: 5%;
 
-}
-
-
-@media (max-width: 1005px){
-  #secondPart{
-      font-size: 25%;
-  }
-
-  .navbar{
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-}
-
-@media (max-width: 604px){
-  #firstPart {
-    flex-shrink: 2;
-    font-size: 25%;
 }
 
 #secondPart {
-    flex-shrink: 2;
-    font-size: 25%;
-    gap: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
 }
-  
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.nameCreator {
+  color: #0B3954;
+  font-weight: bolder;
+}
+  .isen {
+    font-weight: bolder;
+    color: #C81D25;
+  }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 }
