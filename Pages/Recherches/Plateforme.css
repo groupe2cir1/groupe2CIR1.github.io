@@ -1,264 +1,405 @@
-/* Navbar container */
+/* Start Header & Footer */
 /* Navbar container */
 .navbar {
-    
-    font-size:  100%;
-    display: flex;
-    background: #0B3954;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-  
-    gap: 1%;
-  
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-left: 2%;
-    padding: 0;
-  
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-    overflow: hidden;
-    font-family: Arial;
-  }
-  
-  /* Links inside the navbar */
-  .navbar a {
-    float: left;
-  
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* The dropdown container */
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    font-size: 100%;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-  }
-  
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #087E8B;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #087E8B;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    color: #0B3954;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  #logo {
-    width: 8%;
-    height: 8%;
-    margin-left: 3%;
-  }
-  
-  .navbar img {
-    width: 2%;
-    height: 2%;
-  }
-  
-  #footerContainer {
+
+  font-size:  100%;
   display: flex;
-  flex-grow: 1;
+  background: #0B3954;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  gap: 1%;
+
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-left: 2%;
+  padding: 0;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  overflow: hidden;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
   font-size: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #087E8B;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #087E8B;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #0B3954;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#logo {
+  width: 8%;
+  height: 8%;
+  margin-left: 3%;
+}
+
+.navbar img {
+  width: 2%;
+  height: 2%;
+}
+
+.email{
+  font-size: 80%;
+}
+
+/* This line may interfer with your code (with some heritage and style), you can try removing it if resolves your problem. if so, dm me*/
+body {
+  font-family: "Inter", sans-serif;
+  color: #087E8B;
+  margin: 0;
+
+}
+
+
+@media (max-width: 1705px) {
+
+  .navbar {
+    font-size: 75%;
+    gap: 0%;
+
   }
-  
-  #firstPart {
-    display: flex;
-    gap: 8rem;
-  
-    flex-direction: row;
-    background: #0B3954;
-    
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-    padding: 1.5rem 0;
-  
-    color: #F9A3A3;
-  
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 30%; 
-    top: 86%;
-  
-    align-items: center;
-    justify-content: center;
+
+  .navbar a {
+    font-size: 75%;
   }
-  
-  
-  
-  #secondPart{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: #0B3954;
-    
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-  
-    gap: 7%;
-    
-    padding-bottom: 1.5rem;
-    padding-top: 0;
-  
-    color: #F9A3A3;
-  
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 71%;
-    top: 86%;
-  
-   
-    justify-content: center;
-    
-  }
-  
-  .email{
-    font-size: 80%;
-  }
-  
-    /* This line may interfer with your code (with some heritage and style), you can try removing it if resolves your problem. if so, dm me*/
-    body {
-      font-family: "Inter", sans-serif;
-      color: #087E8B;
-      margin: 0;
-    
-    }
-    
-  
-  /* Responsive du Header et Footer */
-  @media (max-width: 1530px){
-  
-    #firstPart {
-        flex-shrink: 2;
-        font-size: 50%;
-    }
-  
-    #secondPart {
-        flex-shrink: 2;
-        font-size: 50%;
-        gap: 0;
-    }
-  }
-  @media (max-width: 1705px){
-  
-    .navbar {
-        font-size: 75%;
-        gap: 0%;
-  
-    }
-  
-    .navbar a{
-        font-size: 75%;
-    }
-  
-    .dropdown-content a{
-        font-size: 50%;
-    }
-  
-  
-    .navbar img {
-        width: 1%;
-        height: 1%;
-    }
-    
-  
-  }
-  
-  @media (max-width: 1757px){
-  
-  footer {
+
+  .dropdown-content a {
     font-size: 50%;
   }
-  
-  #firstPart {
-    gap: 0;
-  }
-  
-  }
 
-  
-  @media (max-width: 1005px){
-    #secondPart{
-        font-size: 25%;
-    }
-  
-    .navbar{
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: 0;
-    }
-  
-  }
-  
-  @media (max-width: 604px){
-    #firstPart {
-      flex-shrink: 2;
-      font-size: 25%;
-  }
-  
-  #secondPart {
-      flex-shrink: 2;
-      font-size: 25%;
-      gap: 0;
-  }
-    
-  }
 
-  
-  
+  .navbar img {
+    width: 1%;
+    height: 1%;
+  }
+}
 
-  #container {
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.nameCreator {
+  color: #0B3954;
+  font-weight: bolder;
+}
+.isen {
+  font-weight: bolder;
+  color: #C81D25;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalContainer {
+  display: none;
+
+}
+#prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  align-items: center;
+}
+
+.align{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#call {
+  padding: 20%;
+  margin-right: 90%;
+  border-radius: 20px;
+  background: #0B3954;
+  color: white;
+}
+#uncall {
+  padding: 20%;
+  margin-left: 90%;
+  border-radius: 20px;
+  background: #611a1a;
+  color: white;
+}
+
+#firstPart {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-5-27 17:42:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wobble-hor-bottom {
+  -webkit-animation: wobble-hor-bottom 1s infinite both;
+  animation: wobble-hor-bottom 1s infinite both;
+}
+
+
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+.blink-1 {
+  -webkit-animation: blink-1 0.6s both;
+  animation: blink-1 0.6s both;
+}
+
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.openner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.openner:hover {
+  background-color: #0B4262;
+}
+/*End of header & footer*/
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+#container {
     display: flex;
     flex-direction: column;
     gap: 20%;
@@ -328,8 +469,6 @@
 
   .image {
     float: left;
-    width: 20%;
-    height: 20%;
     margin-right: 5%;
     margin-top: 1em;
   }
@@ -341,6 +480,44 @@
     align-items: center;
   }
 
-  #end {
-    margin-bottom: 20%;
-  }
+
+/* The Modal (background) */
+.classModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  transition: box-shadow 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.classModal:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Content/Box */
+.modal-contents {
+  display: flex;
+     flex-direction: column;
+        justify-content: center;
+          align-items: center;
+
+  gap: 10%;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#secondModal {
+  margin-bottom: 20%;
+}
