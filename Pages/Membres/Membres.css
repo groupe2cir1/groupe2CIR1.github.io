@@ -337,6 +337,110 @@ body {
 }
 
 
+.tempCard {
+    display: inline-flex;
+    width: 10%;
+    height: 90%;
+    flex-direction: column;
+    gap: 70%;
+    border: 1px solid #000000;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 1%;
+    margin: 1%;
+}
+
+.inputCard {
+    margin-bottom: 10%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 6px solid rgba(217, 217, 217, 0.31);
+    color: #0B4262;
+}
+
+#target {
+    box-sizing: border-box;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    overflow-x: auto;
+}
+
+.buttonContainer {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.cardDefault,
+.cardDefault:hover {
+
+    background-size: 300px;
+}
+
+.cardDefault:hover {
+    background-size: 600px;
+}
+
+.newDeleteButton {
+    color: #611a1a;
+}
+
+#addMember {
+    padding: 0.5%;
+    border-radius: 20px;
+    background-color: #0B4262;
+    color: white;
+    font-weight: bold;
+}
+
+.nonEditionMode {
+    display: none;
+
+}
+
+.editionMode {
+    display: block;
+}
+
+#modeEdition {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: 9999;
+
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 0.5%;
+    color: white;
+    background: rgb(11,66,98);
+    background: linear-gradient(90deg, rgba(11,66,98,1) 34%, rgba(11,57,84,1) 100%, rgba(23,17,89,1) 100%);
+    font-family: Arial
+}
+
+.buttonToggled {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: 9999;
+
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 0.5%;
+    color: white;
+    background: white;
+    color: #611a1a;
+    font-family: Arial;
+
+}
 
 
 
@@ -354,19 +458,7 @@ body {
 
 
   /* Responsive du Header et Footer */
-  @media (max-width: 1530px){
-  
-    #firstPart {
-        flex-shrink: 2;
-        font-size: 50%;
-    }
-  
-    #secondPart {
-        flex-shrink: 2;
-        font-size: 50%;
-        gap: 0;
-    }
-  }
+
   @media (max-width: 1705px){
   
     .navbar {
@@ -398,10 +490,6 @@ body {
     font-size: 50%;
   }
   
-  #firstPart {
-    gap: 0;
-  }
-  
   }
   
   
@@ -417,18 +505,5 @@ body {
     }
   
   }
-  
-  @media (max-width: 604px){
-    #firstPart {
-      flex-shrink: 2;
-      font-size: 25%;
-  }
-  
-  #secondPart {
-      flex-shrink: 2;
-      font-size: 25%;
-      gap: 0;
-  }
-    
-  }
+
   

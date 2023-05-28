@@ -129,9 +129,215 @@ function modalCard() {
     }
 }
 
-function main () {
-    blackCard();
+function addMember() {
+    document.getElementById("addMember").addEventListener("click", function() {
+       //Création des éléments essentiels
+        let container = document.createElement("div");
+       container.className = "tempCard";
+       let target = document.getElementById("target");
+       let checkButton = document.createElement("i")
+         checkButton.className = "fa-solid fa-check";
+         checkButton.id = "checkButton";
+
+       let deleteButton = document.createElement("i");
+            deleteButton.className = "fa-solid fa-trash deleteButton";
+
+
+
+       //création de toutes les inputs
+         let inputName = document.createElement("input");
+            inputName.setAttribute("type", "text");
+            inputName.setAttribute("placeholder", "Nom et Prénom");
+            inputName.className = "inputCard"
+
+        let inputProject = document.createElement("input");
+            inputProject.setAttribute("type", "text");
+            inputProject.setAttribute("placeholder", "Nature du Projet");
+            inputProject.className = "inputCard"
+
+        let inputSite = document.createElement("input");
+            inputSite.setAttribute("type", "text");
+            inputSite.setAttribute("placeholder", "Site de Projet");
+            inputSite.className = "inputCard"
+
+        let inputEmail = document.createElement("input");
+            inputEmail.setAttribute("type", "text");
+            inputEmail.setAttribute("placeholder", "Email");
+            inputEmail.className = "inputCard"
+
+        let inputPeriod = document.createElement("input");
+            inputPeriod.setAttribute("type", "text");
+            inputPeriod.setAttribute("placeholder", "Période");
+            inputPeriod.className = "inputCard"
+
+
+        let span = document.createElement("span");
+            span.className = "buttonContainer";
+            span.appendChild(checkButton);
+            span.appendChild(deleteButton);
+
+        //Ajout des inputs dans le container
+        container.appendChild(inputName);
+        container.appendChild(inputProject);
+        container.appendChild(inputSite);
+        container.appendChild(inputPeriod);
+        container.appendChild(inputEmail);
+        container.appendChild(span);
+
+
+        //Ajout du container dans la cible
+       target.appendChild(container);
+
+       //Gestion de la card à l'appuie des boutons
+        updateDeleteButton(); //Mets à jour le listner pour les boutons de suppression
+
+        //Si jamais on valide l'entrée
+        checkButton.addEventListener("click", function() {
+           let newCard = document.getElementsByClassName("contenu")[1].cloneNode(true);
+           newCard.children[0].classList.remove("card2");
+           newCard.children[0].classList.add("cardDefault");
+           target.appendChild(newCard); //J'ajoute la nouvelle card avant pour éviter les conflits d'existence
+
+           newCard.children[0].children[0].children[0].innerText = inputName.value; //Champ Nom
+            newCard.children[0].children[0].children[0].style.color = '#087E8B'; //Changer la couleur du nom
+            newCard.children[0].children[0].children[1].style.color = '#C81D25'; //Changer la couleur du text
+           newCard.children[0].children[0].children[1].innerText = "▪ Période : "+ inputPeriod.value +"\n" +
+               "\n" +
+               "▪ Projet : " + inputProject.value +"\n" +
+               "\n" +
+               "▪ "+ inputSite.value +"\n" +
+               "\n" +
+               "▪ "+ inputEmail.value +"\n"
+
+            checkButton.parentNode.parentNode.remove();
+           //Ajout image aléatoire
+            let allCards = Array.from(document.getElementsByClassName("cardDefault"));
+            let lastCard = allCards[allCards.length - 1];
+
+            let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random();
+            lastCard.style.background = 'url("' + randomImage + '") center center no-repeat';
+            lastCard.style.backgroundSize = '300px';
+            //Ajout du Bouton de suppression
+            let newDeleteButton = document.createElement("i");
+            newDeleteButton.className = "fa-solid fa-trash newDeleteButton";
+            newCard.appendChild(newDeleteButton);
+            newDeleteButtons();
+
+        });
+
+    });
+}
+
+function updateDeleteButton() {
+    let deleteButtons = document.querySelectorAll(".deleteButton");
+    for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener("click", function() {
+            this.parentNode.parentNode.remove();
+        });
+    }
+}
+
+function newDeleteButtons() {
+    let deleteButtons = document.querySelectorAll(".newDeleteButton");
+    for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener("click", function() {
+            this.parentNode.remove();
+        });
+    }
+}
+
+function changeButtonColor() {
+    let button = document.getElementById("addMember");
+    button.addEventListener("mouseover", function() {
+        button.style.color = "#0B4262";
+        button.style.backgroundColor = "white";
+    });
+    button.addEventListener("mouseout", function() {
+        button.style.color = "white";
+        button.style.backgroundColor = "#0B4262";
+    });
+}
+
+function editTitle(){
+    let title = Array.from(document.getElementsByTagName("h2"));
+    title.forEach(function(element){
+        element.addEventListener("click", function(){
+
+            let input = document.createElement("input");
+            input.setAttribute("type", "text");
+            input.setAttribute("placeholder", "Titre");
+            input.value = element.innerText;
+            element.replaceWith(input);
+            input.addEventListener("blur", function(){
+                let newTitle = document.createElement("h2");
+                newTitle.innerText = input.value;
+                input.replaceWith(newTitle);
+                editTitle();
+            });
+
+        });
+    });
+}
+
+function hash(str){
+    let encodedMessage = btoa(str);
+    return encodedMessage;
+}
+
+function modeEdition(){
+    let button = document.getElementsByClassName("ident")[0];
+    console.log(button);
+
+    if(button.classList.contains("buttonToggled")){ //Je suis en mode édition, je le quitte
+        let answer = prompt("Etes vous sûr de vouloir quitter le mode édition ? (oui/non)");
+        if(answer === "oui"){
+            alert("Vous êtes déconnecté");
+        }
+        else{
+            return;
+        }
+
+
+        button.id = "modeEdition";
+        button.classList.remove("buttonToggled");
+
+        Array.from(document.getElementsByClassName("editionMode")).forEach(function(element){
+            element.className = "nonEditionMode";
+        });
+    }
+    else{ //Je ne suis pas en mode édition, je le lance
+
+        let user = prompt("Veuillez entrer votre nom d'tilisateur");
+        user = hash(user);
+
+        if(user === 'YWRtaW4='){
+            let pass = prompt("Veuillez entrer votre mot de passe");
+            pass = hash(pass);
+
+            if(pass === 'YWRtaW5fcHdk'){
+                alert("Vous êtes connecté");
+                Array.from(document.getElementsByClassName("nonEditionMode")).forEach(function(element){
+                    element.className = "editionMode";
+                });
+                editTitle();
+                button.id = "";
+                button.classList.add("buttonToggled");
+            }
+            else{alert("Mot de passe incorrect")}
+
+        }
+        else{alert("Nom d'utilisateur incorrect")}
+    }
 
 }
 
+
+function main () {
+    document.getElementById("modeEdition").addEventListener("click", modeEdition);
+    blackCard();
+    addMember();
+    changeButtonColor();
+
+
+}
 main();
