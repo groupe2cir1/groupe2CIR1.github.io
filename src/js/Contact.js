@@ -63,7 +63,7 @@ function createFallingFruits() {
 
     // Créer l'élément du fruit doré
     const goldenFruit = document.createElement('img');
-    goldenFruit.src = 'fruits/goldenfruit.png';
+    goldenFruit.src = 'ressources/fruits/goldenfruit.png';
     goldenFruit.alt = 'Fruit doré';
     goldenFruit.classList.add('fruit-golden');
     document.body.appendChild(goldenFruit);
@@ -83,7 +83,7 @@ function createFallingFruits() {
 
         // Créer l'élément du fruit
         const fruit = document.createElement('img');
-        fruit.src = `fruits/${randomFruitType}.png`;
+        fruit.src = `ressources/fruits/${randomFruitType}.png`;
         fruit.alt = randomFruitType;
         fruit.classList.add('fruit');
         document.body.appendChild(fruit);
