@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+    <meta charset="utf-8">
+    <link href="src/css/Contact.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5b8b37978c.js" crossorigin="anonymous" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="src/js/generalFunctions.js" defer></script>
+    <script src="src/js/Contact.js" defer></script>
+    <title> Contact </title>
+ </head>
+
+ <!-- Add this part at the beginning of your HTML page-->
+    <div class="navbar">
+        
+
+        <img class="navImg" src="ressources/icons/accueil.svg">
+        <a href="Accueil.html" >Accueil</a>
+
+        <img class="navImg" src="ressources/icons/recherches.svg">
+        <div class="dropdown">
+            <button class="dropbtn">Recherches
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Thematique.html" >Thématiques de recherche</a>
+                <a href="Plateforme.html" >Plateformes technologiques</a>
+            </div>
+        </div>
+
+
+        <img class="navImg" src="ressources/icons/membres.svg">
+        <a href="Membres.html" id="text" >Membres</a>
+
+
+        <img class="navImg" src="ressources/icons/projet.svg">
+        <a href="Projets.html" >Projets</a>
+
+
+
+        <img class="navImg" src="ressources/icons/publications.svg">
+        <a href="Publications.html" >Publications</a>
+
+    
+
+        <img class="navImg" src="ressources/icons/partenaires.svg">
+        <a href="Partenaires.html" >Partenaires</a>
+
+        
+        <img class="navImg" src="ressources/icons/infos_et_contacts.svg">
+        <div class="dropdown">
+            <button class="dropbtn">Infos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Contact.html" >Contactez-nous</a>
+                <a href="Plan.html" >Plan d'Accès</a>
+                <a href="Offre.html" >Offres d'emploi</a>
+            </div>
+            </div>
+        
+        <img id="logo" src="ressources/icons/logoIsen.png">
+
+    </div>
+    
+    <!-- You can start to code here-->
+    <body>
+        
+        <form action="Contact.html" method="GET" id="container">
+            <div class="text"><p>Une question ? Besoin d'un renseignement ? Contactez-nous :</p></div>
+            
+            <div class="box"> <i class="fa-solid fa-person"></i><input type="text" name="lname" class="input"> </div>
+            <p class="errorText" id="box1">Veuillez renseigner un nom et un prénom</p>
+            
+            <div class="box"> <i class="fa-solid fa-at"></i> <input type="text" name="email" class="input"> </div>
+            <p class="errorText" id="box2">Email inccorect</p>
+
+            <div class="mess"><textarea placeholder="Type in your message..." rows="4" cols="20"></textarea> <span class="subdiv"><p class="envoyer"><input type="submit" id="default" value="Envoyer"></p> <p class="errorText" id="box3"> 20 caractères minimum, 1000 maximum</p></span></div>
+            
+            
+            
+        </form>
+                                                                                                                              
+    </body>
+
+
+
+ <!-- Add this part at the end of your HTML page-->
+ <footer>
+     <!-- Trigger/Open The Modal -->
+     <button id="myButton" class="openner"></button>
+
+     <!-- The Modal -->
+     <div id="mineModal" class="classModal">
+
+         <!-- Modal content -->
+         <div class="modalContent">
+             <div id="firstPart">
+
+                 <div>
+                     <p><u class="isen">. ISEN Nantes</u><br><br>
+                         Tél. : <span class="tel">+33(0)2 30 13 05 60</span><br>
+                         Adresse: 35 Avenue du<br> Champ de Manœuvre<br> 44470 Carquefou</p>
+                 </div>
+
+                 <div>
+                     <p><u class="isen">. ISEN Brest </u> <br><br>
+                         Tél. : <span class="tel">+33(0)2 98 03 84 00</span><br>
+                         Addresse: 20, rue Cuirassé<br> Bretagne 29228 Brest Cedex 2</p>
+
+
+                 </div>
+
+                 <div>
+                     <p><u class="isen">. ISEN Caen </u> <br><br>
+                         Tél. : <span class="tel">+33(0)2 30 31 03 20</span><br>
+                         Adresse: 8, Avenue Croix<br> Guérin 14000 Caen</p>
+
+
+                 </div>
+
+                 <div>
+                     <p><u class="isen">. ISEN Rennes </u> <br><br>
+                         Tél. : <span class="tel">+33(0)2 30 13 02 50</span><br>
+                         2 rue de la <br>Châtaigneraie 35510 Cesson<br> Sévigné</p>
+
+                 </div>
+             </div>
+
+             <div id="secondPart">
+                 <div><p><span class="nameCreator">Par: Yanis RUFFLE</span><br> <span class="email">yanis.ruffle@isen-ouest.yncrea.fr</span></p></div>
+                 <div><p><span class="nameCreator">Wissam LAHMIDI</span><br> <span class="email">wissam.lahmidi@isen-ouest.yncrea.fr</span></p></div>
+                 <div><p><span class="nameCreator">Nirina MACON</span><br> <span class="email">nirina.macon@isen-ouest.yncrea.fr</span></p></div>
+                 <div><p><span class="nameCreator">Benjamin BOYER</span><br> <span class="email">benjamin.boyer@isen-ouest.yncrea.fr</span></p></div>
+             </div>
+             <br>
+
+             <div id="modalContainer">
+                 <div id="prompt">
+                     <p><u>Veuillez confirmer le numéro à appeler:</u></p>
+                     <input type="text" id="num" name="num" placeholder="Numéro de téléphone">
+                     <span class="align"> <i id="call" class="fa-solid fa-phone"></i> <i id="uncall" class="fa-solid fa-phone-slash"></i></span>
+                 </div>
+             </div>
+
+         </div>
+
+     </div>
+
+
+
+ </footer>
+
+</html>
