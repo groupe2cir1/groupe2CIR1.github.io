@@ -132,6 +132,10 @@ function redirectOnClick() {
 function clock() {
     let event = new Date();
     let clock = document.getElementById('clock');
+    clock.style.color = "white";
+    clock.style.fontSize = "small";
+    clock.style.textAlign = "center";
+    clock.style.justifyContent = "center";
     let time = event.toLocaleTimeString('en-US');
     clock.innerHTML = time;
 }
