@@ -127,6 +127,18 @@ function redirectOnClick() {
     });
 }
 
+/* Function de l'horloge faite par Yanis */
+
+function clock() {
+    let event = new Date();
+    let clock = document.getElementById('clock');
+    let time = event.toLocaleTimeString('en-US');
+    clock.innerHTML = time;
+    
+
+}
+
+/* End Clock Function */
 
 function mainOverall() {
     copyAlert();
