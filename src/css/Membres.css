@@ -1,5 +1,9 @@
 /* Start Header & Footer */
 /* Navbar container */
+
+#exceptCenter{
+    text-align: center;
+}
 .navbar {
 
     font-size:  100%;

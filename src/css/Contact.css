@@ -1,5 +1,12 @@
 /* Start Header & Footer */
 /* Navbar container */
+:root {
+  --couleur-originale: white;
+  --couleur-texte-originale: #0B3954;
+  --couleur-rouge-pastel: #611a1a;
+  --couleur-texte-blanc: white;
+}
+
 .navbar {
 
   font-size:  100%;
@@ -484,6 +491,9 @@ body {
     border-radius: 18px;
     border: none;
     font-weight: 600;
+    background: white;
+    color: #611a1a;
+
   
   }
 
@@ -583,11 +593,10 @@ i {
   }
 
   #default {
-    background: rgb(185, 185, 185);
     border-radius: 18px;
     border: none;
-    color: #0B4262;
     font-weight: 600;
+    color: #0B3954;
    
   }
  

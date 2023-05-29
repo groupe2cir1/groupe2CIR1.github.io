@@ -111,20 +111,31 @@ function returnOnClick() {
     });
 }
 
-function redirectOnClick() {
+function redirectOnClick(url) {
     const links = document.querySelectorAll('a');
 
+
     links.forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-      
-        const targetUrl = this.href;
-      
-        localStorage.setItem('targetUrl', targetUrl); // Stocke l'URL cible dans localStorage
-      
-        window.location.href = 'src/misc/waitPage.html'; // Redirige vers la page temporaire
-      });
+
+        if(link.innerText !== "Membres"){ //Gestion particulière de la redirection pour la page Membres
+          link.addEventListener('click', function(event) {
+              event.preventDefault();
+
+              let targetUrl = this.href;
+
+              localStorage.setItem('targetUrl', targetUrl); // Stocke l'URL cible dans localStorage
+
+              window.location.href = 'src/misc/waitPage.html'; // Redirige vers la page temporaire
+          });
+        }
     });
+}
+
+function redirectToSpecificPage() {
+        const targetUrl = '../../Thematique.html';
+        localStorage.setItem('targetUrl', targetUrl); // Stocke l'URL cible dans localStorage
+        window.location.href = 'src/misc/waitPage.html'; // Redirige vers la page temporaire
+
 }
 
 /* Function de l'horloge faite par Yanis */
@@ -144,7 +155,25 @@ function DisplayTime() {
     let TimeID = setInterval(clock, 1000);
 }
 
+
 /* End Clock Function */
+
+function memberAlert() { //Gestion particulière de la redirection pour la page Membres
+
+    let answer = prompt("Souhaitez-vous vraiment découvrir les membres de l'équipe ? (oui/non)");
+    setTimeout(function(){}, 5000);
+    if (answer === "oui") {
+
+        const targetUrl = '../../Membres.html';
+        localStorage.setItem('targetUrl', targetUrl); // Stocke l'URL cible dans localStorage
+        window.location.href = 'src/misc/waitPage.html'; // Redirige vers la page temporaire
+
+    } else {
+        alert("Dommage, vous ne saurez jamais qui nous sommes...");
+
+    }
+}
+
 
 function mainOverall() {
     copyAlert();
@@ -153,5 +182,11 @@ function mainOverall() {
     openFooterModal();
     telOnCopy();
     DisplayTime();
+    document.addEventListener("DOMContentLoaded", function() {
+        let member = document.getElementById("memberAlert");
+        member.addEventListener("click", function (event) {
+            memberAlert();
+        });
+    });
 }
 mainOverall();

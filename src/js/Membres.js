@@ -196,9 +196,9 @@ function addMember() {
             checkButton.parentNode.parentNode.remove();
            //Ajout image aléatoire
             let allCards = Array.from(document.getElementsByClassName("cardDefault"));
-            let lastCard = allCards[allCards.length - 1];
+            let lastCard = allCards[allCards.length - 1]; //Je sélectionne la dernière card créée
 
-            let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random();
+            let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random(); //Obtention d'une image aléatoire
             lastCard.style.background = 'url("' + randomImage + '") center center no-repeat';
             lastCard.style.backgroundSize = '300px';
             //Ajout du Bouton de suppression

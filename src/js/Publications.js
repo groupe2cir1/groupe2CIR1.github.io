@@ -84,11 +84,10 @@ function filter(){
         let fourthText = document.getElementsByClassName("text")[3];
         let fifthText = document.getElementsByClassName("text")[4];
 
-        console.log(document.getElementsByClassName("text")[0].innerText);
 
         Array.from(document.getElementsByClassName("text")).forEach(element => {
             if(element.innerHTML.includes(text)){
-                console.log("ok");
+
                 element.parentElement.style.display = "block";
                 element.parentElement.style.order = "-1";
             }

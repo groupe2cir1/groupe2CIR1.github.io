@@ -31,10 +31,11 @@ function canSend(){
         count++;
     } 
 
-    if(email === "" || email.split("@").length-1 != 1 || email.split(".").length-1 > 2 || email.split(".").length-1 < 1){
+    if(email === "" || email.split("@").length-1 !== 1 || email.split(".").length-1 > 2 || email.split(".").length-1 < 1){
 
         document.getElementById("box2").className = "visible";
         button.className = "shake-horizontal";
+
         
         count++;
     }
@@ -100,19 +101,18 @@ function createFallingFruits() {
     animateFruit(goldenFruit);
 }
 
-// Fonction pour animer un fruit qui tombe
 
 // Fonction pour animer un fruit qui tombe
 function animateFruit(fruit) {
-    const initialPosition = -50; // Position initiale du fruit en dehors de la fenêtre
-    const randomSpeed = Math.random() * (2 - 0.5) + 0.5; // Vitesse de chute aléatoire
-    const fruitWidth = 50; // Largeur du fruit
-    const goldenFruitWidth = 70; // Largeur du golden fruit
+    const initialPosition = -50;
+    const randomSpeed = Math.random() * (2 - 0.5) + 0.5;
+    const fruitWidth = 50;
+    const goldenFruitWidth = 70;
 
     let positionX = Math.random() * (window.innerWidth - fruitWidth); // Position horizontale initiale aléatoire
-    let positionY = initialPosition; // Position verticale initiale
-    let directionX = Math.random() < 0.5 ? -1 : 1; // Direction du déplacement horizontal (-1 pour la gauche, 1 pour la droite)
-    let directionY = 1; // Direction du déplacement vertical (1 pour le bas)
+    let positionY = initialPosition;
+    let directionX = Math.random() < 0.5 ? -1 : 1;
+    let directionY = 1;
 
     // Vérifier si le fruit est le golden fruit
     const isGoldenFruit = fruit.classList.contains('golden-fruit');
