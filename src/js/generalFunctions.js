@@ -134,8 +134,10 @@ function clock() {
     let clock = document.getElementById('clock');
     let time = event.toLocaleTimeString('en-US');
     clock.innerHTML = time;
-    
+}
 
+function DisplayTime() {
+    let TimeID = setInterval(clock, 1000);
 }
 
 /* End Clock Function */
@@ -146,5 +148,6 @@ function mainOverall() {
     redirectOnClick();
     openFooterModal();
     telOnCopy();
+    DisplayTime();
 }
 mainOverall();
