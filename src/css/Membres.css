@@ -415,6 +415,13 @@ body {
     position: relative;
   }
 
+.ModalImg {
+    height: 15%;
+    width: 15%;
+
+
+}
+
 .border {
     height: 369px;
     width: 290px;
@@ -531,11 +538,11 @@ body {
 }
 
 .card3 {
-    background: url('/ressources/Portraits/salima.png') center center no-repeat;
+    background: url('/ressources/Portraits/Salima.png') center center no-repeat;
     background-size: 300px;
 }
 .card3:hover {
-    background: url('/ressources/Portraits/salima.png') center center no-repeat;
+    background: url('/ressources/Portraits/Salima.png') center center no-repeat;
     background-size: 600px;
 }
 
@@ -549,11 +556,11 @@ body {
 }
 
 .card5 {
-    background: url('/ressources/Portraits/salima.png') center center no-repeat;
+    background: url('/ressources/Portraits/Salima.png') center center no-repeat;
     background-size: 300px;
 }
 .card5:hover {
-    background: url('/ressources/Portraits/salima.png') center center no-repeat;
+    background: url('/ressources/Portraits/Salima.png') center center no-repeat;
     background-size: 600px;
 }
 

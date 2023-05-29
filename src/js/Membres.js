@@ -112,22 +112,6 @@ function blackCard() {
     
 }
 
-function modalCard() {
-    var modal = document.getElementById('myModal');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-        modal.style.display = "block";
-      }
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-    }
-}
 
 function addMember() {
     document.getElementById("addMember").addEventListener("click", function() {
@@ -331,12 +315,47 @@ function modeEdition(){
 
 }
 
+function modal (myModal, myBtn, mySpan) {
+  // Get the modal
+  var modal = document.getElementById(myModal);
+
+  // Get the button that opens the modal
+  var btn = document.getElementById(myBtn);
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName(mySpan)[0];
+
+  // When the user clicks the button, open the modal 
+  btn.addEventListener("click", function() {
+    modal.style.display = "block";
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
 
 function main () {
     document.getElementById("modeEdition").addEventListener("click", modeEdition);
     blackCard();
     addMember();
     changeButtonColor();
+    modal("myModal0", "card0", "close0");
+    modal("myModal1", "card1", "close1");
+    modal("myModal2", "card2", "close2");
+    modal("myModal3", "card3", "close3");
+    modal("myModal4", "card4", "close4");
+    modal("myModal5", "card5", "close5");
+    modal("myModal6", "card6", "close6");
+
 
 
 }
