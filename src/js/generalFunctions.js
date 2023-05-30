@@ -107,7 +107,7 @@ function copyAlert() {
 
 function returnOnClick() {
     document.getElementById('logo').addEventListener('click', function () {
-        document.location.href = 'Accueil.html';
+        document.location.href = 'index.html';
     });
 }
 
