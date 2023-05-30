@@ -323,7 +323,7 @@ function modal (myModal, myBtn, mySpan) {
   var btn = document.getElementById(myBtn);
 
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName(mySpan)[0];
+  var span = document.getElementById(mySpan);
   
 
   // When the user clicks the button, open the modal 
@@ -338,7 +338,7 @@ function modal (myModal, myBtn, mySpan) {
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if(event.target == modal) {
       modal.style.display = "none";
     }
   }
@@ -349,13 +349,6 @@ function main () {
     blackCard();
     addMember();
     changeButtonColor();
-    modal("myModal0", "card0", "close0");
-    modal("myModal1", "card1", "close1");
-    modal("myModal2", "card2", "close2");
-    modal("myModal3", "card3", "close3");
-    modal("myModal4", "card4", "close4");
-    modal("myModal5", "card5", "close5");
-    modal("myModal6", "card6", "close6");
 
 
 
