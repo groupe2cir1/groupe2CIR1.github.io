@@ -324,6 +324,7 @@ function modal (myModal, myBtn, mySpan) {
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName(mySpan)[0];
+  
 
   // When the user clicks the button, open the modal 
   btn.addEventListener("click", function() {
