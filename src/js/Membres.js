@@ -2,8 +2,8 @@ function blackCard() {
   
     'use strict';
     
-    var isDrawing, lastPoint;
-    var container    = document.getElementById('js-container'),
+    let isDrawing, lastPoint;
+    let container    = document.getElementById('js-container'),
         canvas       = document.getElementById('js-canvas'),
         canvasWidth  = canvas.width,
         canvasHeight = canvas.height,
@@ -40,14 +40,14 @@ function blackCard() {
     function getFilledInPixels(stride) {
       if (!stride || stride < 1) { stride = 1; }
       
-      var pixels   = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+      let pixels   = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
           pdata    = pixels.data,
           l        = pdata.length,
           total    = (l / stride),
           count    = 0;
       
       // Iterate over all pixels
-      for(var i = count = 0; i < l; i += stride) {
+      for(let i = count = 0; i < l; i += stride) {
         if (parseInt(pdata[i]) === 0) {
           count++;
         }
@@ -57,7 +57,7 @@ function blackCard() {
     }
     
     function getMouse(e, canvas) {
-      var offsetX = 0, offsetY = 0, mx, my;
+      let offsetX = 0, offsetY = 0, mx, my;
   
       if (canvas.offsetParent !== undefined) {
         do {
@@ -90,12 +90,12 @@ function blackCard() {
       
       e.preventDefault();
   
-      var currentPoint = getMouse(e, canvas),
+      let currentPoint = getMouse(e, canvas),
           dist = distanceBetween(lastPoint, currentPoint),
           angle = angleBetween(lastPoint, currentPoint),
           x, y;
       
-      for (var i = 0; i < dist; i++) {
+      for (let i = 0; i < dist; i++) {
         x = lastPoint.x + (Math.sin(angle) * i) - 25;
         y = lastPoint.y + (Math.cos(angle) * i) - 25;
         ctx.globalCompositeOperation = 'destination-out';
@@ -315,31 +315,22 @@ function modeEdition(){
 
 }
 
-function modal (myModal, myBtn, mySpan) {
+function modal (myModal, myBtn) {
   // Get the modal
-  var modal = document.getElementById(myModal);
+  let modal = document.getElementById(myModal);
 
   // Get the button that opens the modal
-  var btn = document.getElementById(myBtn);
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementById(mySpan);
-  
+  let btn = document.getElementById(myBtn);  
 
   // When the user clicks the button, open the modal 
   btn.addEventListener("click", function() {
     modal.style.display = "block";
   });
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if(event.target == modal) {
-      document.getElementById("modalContainer").style.display = "none";
+      document.getElementById(myModal).style.display = "none";
     }
   }
 }
