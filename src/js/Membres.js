@@ -339,7 +339,7 @@ function modal (myModal, myBtn, mySpan) {
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if(event.target == modal) {
-      modal.style.display = "none";
+      document.getElementById("modalContainer").style.display = "none";
     }
   }
 }
