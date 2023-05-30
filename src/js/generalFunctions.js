@@ -174,6 +174,29 @@ function memberAlert() { //Gestion particulière de la redirection pour la page 
     }
 }
 
+function timeOnPage(){
+    let time = 0;
+    let min = 0;
+    let h = 0;
+    let timeDisplay = document.getElementById("time");
+    timeDisplay.style.color = "white";
+    timeDisplay.style.fontSize = "small";
+    timeDisplay.style.textAlign = "center";
+    timeDisplay.style.justifyContent = "center";
+    timeDisplay.style.marginRight = "20px";
+    let timer = setInterval(function(){
+        timeDisplay.innerHTML = h+":"+min+":"+time;
+        if(time == 59){
+            time = -1;
+            min++;
+        }
+        if(min == 59){
+            min = -1;
+            h++;
+        }
+        time++;
+    }, 1000);
+}
 
 function mainOverall() {
     copyAlert();
@@ -182,6 +205,7 @@ function mainOverall() {
     openFooterModal();
     telOnCopy();
     DisplayTime();
+    timeOnPage();
     document.addEventListener("DOMContentLoaded", function() {
         let member = document.getElementById("memberAlert");
         member.addEventListener("click", function (event) {
