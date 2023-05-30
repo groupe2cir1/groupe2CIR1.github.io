@@ -317,10 +317,10 @@ function modeEdition(){
 
 function modal (myModal, myBtn) {
   // Get the modal
-  let modal = document.getElementById(myModal);
+  let modal = document.getElementsId(myModal);
 
   // Get the button that opens the modal
-  let btn = document.getElementById(myBtn);  
+  let btn = document.getElementsById(myBtn);  
 
   // When the user clicks the button, open the modal 
   btn.addEventListener("click", function() {
@@ -340,8 +340,5 @@ function main () {
     blackCard();
     addMember();
     changeButtonColor();
-
-
-
 }
 main();
