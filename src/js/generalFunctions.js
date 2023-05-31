@@ -208,7 +208,7 @@ function mainOverall() {
     timeOnPage();
     document.addEventListener("DOMContentLoaded", function() {
         let member = document.getElementById("memberAlert");
-        member.addEventListener("click", function (event) {
+        member.addEventListener("click", function () {
             memberAlert();
         });
     });
