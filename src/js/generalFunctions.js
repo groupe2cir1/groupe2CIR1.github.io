@@ -170,7 +170,6 @@ function memberAlert() { //Gestion particulière de la redirection pour la page 
 
     } else {
         alert("Dommage, vous ne saurez jamais qui nous sommes...");
-
     }
 }
 
