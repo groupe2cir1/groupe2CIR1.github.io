@@ -184,7 +184,7 @@ function timeOnPage(){
     timeDisplay.style.justifyContent = "center";
     timeDisplay.style.marginRight = "20px";
     let timer = setInterval(function(){
-        timeDisplay.innerHTML = h+":"+min+":"+time;
+        timeDisplay.innerHTML = "  "+h+":"+min+":"+time;
         if(time == 59){
             time = -1;
             min++;
