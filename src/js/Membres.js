@@ -1,3 +1,4 @@
+var iteration = 6;
 function blackCard() {
   
     'use strict';
@@ -177,28 +178,38 @@ function addMember() {
 
         //Si jamais on valide l'entrée
         checkButton.addEventListener("click", function() {
+
            let newCard = document.getElementsByClassName("contenu")[1].cloneNode(true);
            newCard.children[0].classList.remove("card2");
            newCard.children[0].classList.add("cardDefault");
            target.appendChild(newCard); //J'ajoute la nouvelle card avant pour éviter les conflits d'existence
 
-           newCard.children[0].children[0].children[0].innerText = inputName.value; //Champ Nom
-            newCard.children[0].children[0].children[0].style.color = '#087E8B'; //Changer la couleur du nom
-            newCard.children[0].children[0].children[1].style.color = '#C81D25'; //Changer la couleur du text
-           newCard.children[0].children[0].children[1].innerText = "▪ Période : "+ inputPeriod.value +"\n" +
-               "\n" +
-               "▪ Projet : " + inputProject.value +"\n" +
-               "\n" +
-               "▪ "+ inputSite.value +"\n" +
-               "\n" +
-               "▪ "+ inputEmail.value +"\n"
+           newCard.children[1].children[0].children[0].innerText = inputName.value; //Champ Nom
+            newCard.children[1].children[0].children[0].style.color = '#087E8B'; //Changer la couleur du nom
+            newCard.children[1].children[0].children[1].style.color = '#087E8B'; //Changer la couleur du text
+
+
+            newCard.children[1].children[0].children[1].innerHTML = '▪ Période : '+ inputPeriod.value + '<p>  ▪ Projet : '+ inputProject.value+'  <p>▪ '+ inputSite.value +'  <p>▪ '+ inputEmail.value; //Champ Texte
+
+            newCard.children[0].setAttribute("onclick", "modal('myModal" + iteration + '\''+"," +'\''+ "card" + iteration + "')"); //Ajout de l'attribut onclick
+            newCard.children[0].id = 'card' + iteration;
+            newCard.children[1].id = 'myModal' + iteration;
+            iteration++;
+
+            let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random(); //Obtention d'une image aléatoire
+
+            newCard.children[1].children[0].children[2].setAttribute("src", randomImage); //Ajout de l'image aléatoire
+
+
+
+
 
             checkButton.parentNode.parentNode.remove();
            //Ajout image aléatoire
             let allCards = Array.from(document.getElementsByClassName("cardDefault"));
             let lastCard = allCards[allCards.length - 1]; //Je sélectionne la dernière card créée
 
-            let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random(); //Obtention d'une image aléatoire
+
             lastCard.style.background = 'url("' + randomImage + '") center center no-repeat';
             lastCard.style.backgroundSize = '300px';
             //Ajout du Bouton de suppression
@@ -206,6 +217,7 @@ function addMember() {
             newDeleteButton.className = "fa-solid fa-trash newDeleteButton";
             newCard.appendChild(newDeleteButton);
             newDeleteButtons();
+
 
         });
 
@@ -269,13 +281,14 @@ function hash(str){
 }
 
 function modeEdition(){
+
     let button = document.getElementsByClassName("ident")[0];
-    console.log(button);
 
     if(button.classList.contains("buttonToggled")){ //Je suis en mode édition, je le quitte
         let answer = prompt("Etes vous sûr de vouloir quitter le mode édition ? (oui/non)");
         if(answer === "oui"){
             alert("Vous êtes déconnecté");
+            }
         }
         else{
             return;
@@ -336,9 +349,17 @@ function modal (myModal, myBtn) {
 }
 
 function main () {
+
     document.getElementById("modeEdition").addEventListener("click", modeEdition);
     blackCard();
     addMember();
     changeButtonColor();
+<<<<<<< Updated upstream
+=======
+
+
+
+
+>>>>>>> Stashed changes
 }
 main();
