@@ -331,10 +331,10 @@ function modeEdition() {
 
 function modal (myModal, myBtn) {
   // Get the modal
-  let modal = document.getElementsId(myModal);
+  let modal = document.getElementById(myModal);
 
   // Get the button that opens the modal
-  let btn = document.getElementsById(myBtn);  
+  let btn = document.getElementById(myBtn);
 
   // When the user clicks the button, open the modal 
   btn.addEventListener("click", function() {
