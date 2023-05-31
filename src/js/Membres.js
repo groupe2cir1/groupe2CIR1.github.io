@@ -191,24 +191,20 @@ function addMember() {
 
             newCard.children[1].children[0].children[1].innerHTML = '▪ Période : '+ inputPeriod.value + '<p>  ▪ Projet : '+ inputProject.value+'  <p>▪ '+ inputSite.value +'  <p>▪ '+ inputEmail.value; //Champ Texte
 
+            /* Attribution des nouvelles IDs et Classes */
             newCard.children[0].setAttribute("onclick", "modal('myModal" + iteration + '\''+"," +'\''+ "card" + iteration + "')"); //Ajout de l'attribut onclick
             newCard.children[0].id = 'card' + iteration;
             newCard.children[1].id = 'myModal' + iteration;
             iteration++;
 
             let randomImage = 'https://source.unsplash.com/random/?Portrait/' + Math.random(); //Obtention d'une image aléatoire
-
             newCard.children[1].children[0].children[2].setAttribute("src", randomImage); //Ajout de l'image aléatoire
-
-
-
-
-
             checkButton.parentNode.parentNode.remove();
-           //Ajout image aléatoire
+
+
+            //Ajout de la card à la fin de la liste
             let allCards = Array.from(document.getElementsByClassName("cardDefault"));
             let lastCard = allCards[allCards.length - 1]; //Je sélectionne la dernière card créée
-
 
             lastCard.style.background = 'url("' + randomImage + '") center center no-repeat';
             lastCard.style.backgroundSize = '300px';
