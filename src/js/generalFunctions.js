@@ -147,7 +147,7 @@ function clock() {
     clock.style.fontSize = "small";
     clock.style.textAlign = "center";
     clock.style.justifyContent = "center";
-    let time = event.toLocaleTimeString('en-US');
+    let time = event.toLocaleTimeString('fr-FR');
     clock.innerHTML = time;
 }
 
