@@ -280,28 +280,29 @@ function hash(str){
     return encodedMessage;
 }
 
-function modeEdition(){
+function modeEdition() {
 
     let button = document.getElementsByClassName("ident")[0];
 
-    if(button.classList.contains("buttonToggled")){ //Je suis en mode édition, je le quitte
+    if (button.classList.contains("buttonToggled")) { //Je suis en mode édition, je le quitte
         let answer = prompt("Etes vous sûr de vouloir quitter le mode édition ? (oui/non)");
-        if(answer === "oui"){
+        if (answer === "oui") {
             alert("Vous êtes déconnecté");
-            }
         }
-        else{
+        else {
             return;
         }
 
 
-        button.id = "modeEdition";
-        button.classList.remove("buttonToggled");
+    button.id = "modeEdition";
+    button.classList.remove("buttonToggled");
 
-        Array.from(document.getElementsByClassName("editionMode")).forEach(function(element){
-            element.className = "nonEditionMode";
-        });
+    Array.from(document.getElementsByClassName("editionMode")).forEach(function (element) {
+        element.className = "nonEditionMode";
+    });
     }
+
+
     else{ //Je ne suis pas en mode édition, je le lance
 
         let user = prompt("Veuillez entrer votre nom d'tilisateur");
@@ -354,12 +355,6 @@ function main () {
     blackCard();
     addMember();
     changeButtonColor();
-<<<<<<< Updated upstream
-=======
 
-
-
-
->>>>>>> Stashed changes
 }
 main();
